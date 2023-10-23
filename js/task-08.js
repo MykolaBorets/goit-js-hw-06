@@ -1,18 +1,17 @@
-const loginForm = document.querySelector('.login-form');
-loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const emailInput = loginForm.elements.email;
-    const passwordInput = loginForm.elements.password;
+const loginForm = document.querySelector(".login-form");
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const emailInput = loginForm.elements.email;
+  const passwordInput = loginForm.elements.password;
 
-    if (emailInput.value !== '' && passwordInput.value !== '') {
-        const dataObject = {
-            email: emailInput.value,
-            password: passwordInput.value,
-        };
-        console.log(dataObject);
-    } else {
-        alert("ПОПЕРЕДЖЕННЯ: Всі поля повинні бути заповнені!"); 
-    }
-
+  if (emailInput.value !== "" && passwordInput.value !== "") {
+    const dataObject = {
+      email: emailInput.value,
+      password: passwordInput.value,
+    };
+    console.log(dataObject);
     event.currentTarget.reset();
+  } else {
+    alert("ПОПЕРЕДЖЕННЯ: Всі поля повинні бути заповнені!");
+  }
 });
